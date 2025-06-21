@@ -22,4 +22,13 @@ def packet_callback(packet):
         # Best to print a seperstor for readability
 
         print("-" * 80)
+
+# Best to let the usser know snifing has started
+
+print("Sniffing started.... Press Ctrl+C to stop...enjoy.")
+
+# Start sniffing packets
+# call our function with necessary scapy dependancys
+
+sniff(prn=packet_callback, store=0)
          
